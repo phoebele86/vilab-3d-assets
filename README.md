@@ -13,19 +13,19 @@ Khoa học tự nhiên THCS. Repo chỉ chứa file mô hình, được publish 
 ## Cấu trúc
 
 ```
-sinh/   # Sinh học, ví dụ sinh/tim.glb
-ly/     # Vật lý
+biology/   # Sinh học, ví dụ biology/heart.glb
+physics/   # Vật lý
 ```
 
 Mô hình Hóa học được dựng bằng code từ dữ liệu phân tử nên không nằm ở đây.
 
-Database chỉ lưu **đường dẫn tương đối** (ví dụ `sinh/tim.glb`). Địa chỉ gốc nằm trong biến
+Database chỉ lưu **đường dẫn tương đối** (ví dụ `biology/heart.glb`). Địa chỉ gốc nằm trong biến
 `VITE_ASSET_URL` của frontend:
 
 | Giai đoạn | Địa chỉ file |
 |---|---|
-| Local | `http://localhost:5173/api/assets/sinh/tim.glb` (backend đọc thẳng thư mục này qua `ASSETS_DIR`) |
-| GitHub Pages | `https://<username>.github.io/vilab-3d-assets/sinh/tim.glb` |
+| Local | `http://localhost:5173/api/assets/biology/heart.glb` (backend đọc thẳng thư mục này qua `ASSETS_DIR`) |
+| GitHub Pages | `https://<username>.github.io/vilab-3d-assets/biology/heart.glb` |
 
 ## Thêm mô hình mới
 
@@ -33,7 +33,7 @@ Database chỉ lưu **đường dẫn tương đối** (ví dụ `sinh/tim.glb`)
 2. Nén trước khi chép vào repo:
 
    ```bash
-   npx @gltf-transform/cli optimize model-original.glb sinh/ten-mo-hinh.glb --compress meshopt
+   npx @gltf-transform/cli optimize model-original.glb biology/model-name.glb --compress meshopt
    ```
 
 3. Mỗi file không quá 10 MB (CI sẽ báo lỗi nếu vượt).
